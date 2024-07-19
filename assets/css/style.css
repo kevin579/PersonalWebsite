@@ -150,6 +150,19 @@
 }
 
 a { text-decoration: none; }
+a.menu{
+  width:40%;
+  color:white;
+  text-shadow: 2px 2px gray;
+  margin:10px;
+  padding:1px;
+}
+
+a.menu:hover{
+  color:var(--light-gray-70);
+  margin:15px;
+  text-shadow :none;
+}
 
 li { list-style: none; }
 
