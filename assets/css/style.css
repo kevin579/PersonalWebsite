@@ -69,7 +69,8 @@
   --onyx: rgb(87, 123, 213);   /*web developer*/
   --eerie-black-1: rgb(83, 117, 201);  /*icons*/
   --eerie-black-2: rgb(101, 130, 203);  /*block background*/
-  --smoky-black: rgb(171, 198, 228);  /*background*/
+  --smoky-black: rgb(198, 238, 249);  /*background*/
+  /*--smoky-black: rgb(171, 198, 228);  background*/
   --white-1: rgb(225,241,253);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsla(53, 69%, 72%, 0.884); /*icon text and activate*/
@@ -143,6 +144,7 @@
   #RESET
 \*-----------------------------------*/
 
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -163,6 +165,7 @@ a.menu:hover{
   margin:15px;
   text-shadow :none;
 }
+
 
 li { list-style: none; }
 
