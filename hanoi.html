@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanoi Towers</title>
+    <style>
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-image: url("./assets/images/background.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+        }
+        #controls {
+            position: absolute;
+            top: 20px;
+            z-index: 10;
+        }
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <label for="pieceCount">Number of pieces:</label>
+        <input type="number" id="pieceCount" min="1" max="10" value="5">
+        <button id="startButton" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; font-family: Arial, sans-serif; border: none; cursor: pointer;">Start Animation</button>
+        <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-align: center; text-decoration: none; border-radius: 5px; font-size: 16px; font-family: Arial, sans-serif; border: none; cursor: pointer;">
+            Return
+        </a>
+        
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script src="hanoi.js"></script>
+</body>
+</html>
