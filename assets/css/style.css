@@ -78,7 +78,9 @@
   --light-gray: hsl(0, 0%, 100%);
   --light-gray-70: hsla(0, 0%, 84%, 0.868);
   --light-gray-100: hsla(0, 0%, 84%, 0.402);
+  --transparent-gray: rgba(255, 255, 255, 0.35);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --resume-color: black;
 
    
   /* --jet: hsl(0, 0%, 22%);
@@ -528,8 +530,55 @@ main {
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
 
+/*-----------------------------------*\
+  #RESUME
+\*-----------------------------------*/
 
+.resume{
+  width:100%;
+  border:1px solid var(--resume-color);
+  border-collapse: collapse;
+  
+}
 
+.resume-heading{
+  border:1px solid var(--resume-color);
+  color:var(--resume-color);
+  background-color: var(--transparent-gray);
+  font-size: var(--fs-4);
+  padding: 8px;
+}
+
+.resume-subheading{
+  color:var(--resume-color);
+  font-size: var(--fs-6);
+  font-weight: bold;
+  margin-top:10px;
+  margin-left: 10px;
+}
+
+.resume-block{
+  border:1px solid var(--resume-color);
+  color:var(--resume-color);
+  font-size: var(--fs-6);
+  padding: 3px;
+  background-color: white;
+}
+
+.resume-text{
+  color:var(--resume-color);
+  font-size: var(--fs-6);
+  margin-left: 30px;
+  margin-bottom: 3px;
+  margin-top: 7px;
+  
+}
+
+.resume-subtext{
+  color:var(--resume-color);
+  font-size: var(--fs-6);
+  margin-left: 50px;
+}
 
 /*-----------------------------------*\
   #ABOUT
@@ -1436,7 +1485,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     justify-content: flex-start;
     align-items: flex-start;
     gap: 18px;
-    padding: 30px;
+    padding: 25px;
   }
 
   .service-icon-box {
