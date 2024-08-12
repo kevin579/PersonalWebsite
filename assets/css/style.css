@@ -197,7 +197,12 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { 
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 
 
@@ -529,6 +534,61 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+/*-----------------------------------*\
+  #child navbar
+\*-----------------------------------*/
+
+
+#navbar.child {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10%;
+  background-color: var(--eerie-black-2);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#navbar.child > * {
+  margin: 0 10px;
+}
+
+label.child {
+  color: white;
+}
+
+input[type="number"].child {
+  width: 60px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+button.child, .button.child {
+  padding: 8px 10px;
+  background-color: var(--eerie-black-1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+button.child:hover, .button.child:hover {
+  background-color: #4a59a0;
+}
+
+canvas.child {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
 
 /*-----------------------------------*\
   #RESUME

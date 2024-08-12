@@ -15,7 +15,7 @@ window.addEventListener('resize', resizeCanvas);
 
 function resizeCanvas() {
     WIDTH = window.innerWidth;
-    HEIGHT = window.innerHeight;
+    HEIGHT = window.innerHeight-100;
     canvas.width = WIDTH;
     canvas.height = HEIGHT;
     Bottom = HEIGHT - HEIGHT * 0.1;
@@ -67,23 +67,6 @@ function setup() {
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
 }
 
-function createPiece() {
-    PIECE_HEIGHT = Math.floor((HEIGHT * 0.2 + num * 2) / num);
-    SPEED = num * 2;
-    for (let i = 0; i < num; i++) {
-        let width = PIECE_HEIGHT * 2 + Math.floor(WIDTH * 0.2 / num * i);
-        let x = Math.floor(WIDTH / 6 - width / 2);
-        let y = Bottom - 2 - PIECE_HEIGHT * (num - i);
-        let piece = { 
-            x: x, 
-            y: y, 
-            width: width, 
-            height: PIECE_HEIGHT,
-            color: `rgb(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255})`
-        };
-        pieces.push(piece);
-    }
-}
 
 async function moveHanoi(num, fill, target, relay) {
     if (num == 1) {
@@ -143,9 +126,17 @@ function movePiece(currentPiece, now, target) {
 }
 
 
+
+
+// Initial setup
+setup();
+update();
+
+// ... (keep existing code)
+
 function update() {
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = '#7b8cde';  // Updated color
     ctx.lineWidth = 5;
     for (let i = 1; i < 6; i++) {
         if (i == 2 || i == 4) continue;
@@ -162,6 +153,24 @@ function update() {
     }
 }
 
-// Initial setup
-setup();
-update();
+// Update createPiece function to use a color palette similar to the main website
+function createPiece() {
+    PIECE_HEIGHT = Math.floor((HEIGHT * 0.2 + num * 2) / num);
+    SPEED = num * 2;
+    const colors = ['#7b8cde', '#5a6abf', '#4a59a0', '#3f4d8a', '#354274'];
+    for (let i = 0; i < num; i++) {
+        let width = PIECE_HEIGHT * 2 + Math.floor(WIDTH * 0.2 / num * i);
+        let x = Math.floor(WIDTH / 6 - width / 2);
+        let y = Bottom - 2 - PIECE_HEIGHT * (num - i);
+        let piece = { 
+            x: x, 
+            y: y, 
+            width: width, 
+            height: PIECE_HEIGHT,
+            color: colors[i % colors.length]
+        };
+        pieces.push(piece);
+    }
+}
+
+// ... (keep the rest of the code)

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanoi Towers</title>
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/logo.ico">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #e6f3ff;
+            background-image: url('path_to_background_image.jpg');
+            background-size: cover;
+        }
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #7b8cde;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #navbar > * {
+            margin: 0 10px;
+        }
+        label {
+            color: white;
+        }
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        button, .button {
+            padding: 5px 10px;
+            background-color: #5a6abf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        button:hover, .button:hover {
+            background-color: #4a59a0;
+        }
+        canvas {
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <label for="pieceCount">Number of pieces:</label>
+        <input type="number" id="pieceCount" min="1" max="10" value="5">
+        <button id="startButton">Start Animation</button>
+        <a href="../../../index.html" class="button">Return to Main Page</a>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script src="hanoi.js"></script>
+</body>
+</html>
