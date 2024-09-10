@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Crawler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 18px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        input {
+            width: 50%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            margin-left: 25%;
+        }
+
+        button {
+            width: 40%;
+            padding: 0.5rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 30%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #results {
+            margin-top: 1rem;
+            white-space: pre-wrap;
+        }
+
+        div.product {
+            border-radius: 14px;
+            background-color: rgb(46, 166, 170);
+            text-align:center;
+            margin-bottom: 20px;
+
+        }
+
+        div.product > p {
+            display: inline;
+            text-align:center;
+        }
+
+        div.product > a {
+            display: inline;
+            text-align:center;
+        }
+        div.product>{
+            margin-left: auto;
+            margin-right:auto;
+        }
+
+        div.grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+        }
+    </style>
+
+    <script>
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Website Crawler</h1>
+    <form id="crawlerForm" , method='POST'>
+        <input type="text" id="productName" name="name" placeholder="Enter product name" required>
+        <button type="submit" name="submit" onclick="document.getElementById('running').display =block">Run Crawler</button>
+    </form>
+{#    <div>#}
+        <img src = "/assets/images/loading.jpg" alt = "loading">
+{#    </div>#}
+    <div class="grid-container">
+
+        {% for product in products %}
+            <div class="product" id = "results">
+                <p>{{ product[0][:20] }} {{ product[1] }}</p>
+                <a href="{{ product[3] }}"><img src="{{ product[2] }}" alt="{{ product[0][:20] }}"
+                                                style="width:200px;height:auto"></a>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+</body>
+</html>
