@@ -84,18 +84,20 @@
     </style>
 
     <script>
+
     </script>
 </head>
 <body>
+
 <div class="container">
     <h1>Website Crawler</h1>
     <form id="crawlerForm" , method='POST'>
         <input type="text" id="productName" name="name" placeholder="Enter product name" required>
         <button type="submit" name="submit" onclick="document.getElementById('running').display =block">Run Crawler</button>
     </form>
-{#    <div>#}
-        <img src = "/assets/images/loading.jpg" alt = "loading">
-{#    </div>#}
+    <div>
+        <img src = "../../../../assets/images/loading.jpg" alt = "loading">
+    </div>
     <div class="grid-container">
 
         {% for product in products %}
