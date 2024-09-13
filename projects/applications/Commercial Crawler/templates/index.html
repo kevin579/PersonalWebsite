@@ -57,29 +57,46 @@
         div.product {
             border-radius: 14px;
             background-color: rgb(46, 166, 170);
-            text-align:center;
+            text-align: center;
             margin-bottom: 20px;
 
         }
 
         div.product > p {
             display: inline;
-            text-align:center;
+            text-align: center;
         }
 
         div.product > a {
             display: inline;
-            text-align:center;
+            text-align: center;
         }
-        div.product>{
+
+        div.product > {
             margin-left: auto;
-            margin-right:auto;
+            margin-right: auto;
         }
 
         div.grid-container {
             display: grid;
             grid-template-columns: auto auto auto;
             grid-gap: 10px;
+        }
+
+        img {
+            {#transform: rotate(180deg);#}
+            animation: rotation 6s infinite linear;
+            width:100px;
+            height:100px;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 
@@ -93,15 +110,16 @@
     <h1>Website Crawler</h1>
     <form id="crawlerForm" , method='POST'>
         <input type="text" id="productName" name="name" placeholder="Enter product name" required>
-        <button type="submit" name="submit" onclick="document.getElementById('running').display =block">Run Crawler</button>
+        <button type="submit" name="submit" onclick="document.getElementById('running').display =block">Run Crawler
+        </button>
     </form>
     <div>
-        <img src = "../../../../assets/images/loading.jpg" alt = "loading">
+        <img src="{{ url_for('static',filename = 'loading.png') }}" alt="loading">
     </div>
     <div class="grid-container">
 
         {% for product in products %}
-            <div class="product" id = "results">
+            <div class="product" id="results">
                 <p>{{ product[0][:20] }} {{ product[1] }}</p>
                 <a href="{{ product[3] }}"><img src="{{ product[2] }}" alt="{{ product[0][:20] }}"
                                                 style="width:200px;height:auto"></a>
