@@ -8,7 +8,6 @@ def index():
     if request.method == 'GET':
         return render_template('index.html')
     if request.method =='POST':
-        print("submitted")
         name = request.form.get("name")
         # print(name)
         product = crawl(name)
