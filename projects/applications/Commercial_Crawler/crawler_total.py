@@ -1,6 +1,5 @@
 import requests
 import re 
-import url_manager
 import urllib.request, urllib.error
 from bs4 import BeautifulSoup
 import io
