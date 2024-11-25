@@ -1,1 +1,1 @@
-web: gunicorn projects.applications.CommercialWebsite.app:app
+web: gunicorn projects.applications.Commercial_Crawler.app:app
