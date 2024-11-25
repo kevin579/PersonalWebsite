@@ -1,5 +1,5 @@
 from flask import Flask, jsonify,render_template,request,make_response,json
-from crawler_total import crawl
+from projects.applications.Commercial_Crawler.crawler_total import crawl
 import mysql.connector
 app = Flask(__name__,
             static_url_path='/projects/applications/CommercialWebsite/static',  # Update path
