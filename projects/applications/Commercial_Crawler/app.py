@@ -1,5 +1,5 @@
 from flask import Flask, jsonify,render_template,request,make_response,json
-from projects.applications.Commercial_Crawler.crawler_total import crawl
+from crawler_total import crawl
 # import mysql.connector
 app = Flask(__name__)
 # database = mysql.connector.connect(

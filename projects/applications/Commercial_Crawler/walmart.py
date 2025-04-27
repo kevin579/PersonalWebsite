@@ -26,7 +26,7 @@ product = input("Please enter your product: ")
 product = product.replace(" ", "+")
 
 root_url = "https://www.walmart.ca/en/search?q="+product
-fout = open("projects/applications/Commercial Crawler/source.txt","w",encoding="utf-8")
+fout = open("projects/applications/Commercial_Crawler/source.txt","w",encoding="utf-8")
 source = askURL(root_url)
 fout.write(source)
 fout.close()
