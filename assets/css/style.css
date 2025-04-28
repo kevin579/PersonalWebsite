@@ -73,7 +73,7 @@
   /*--smoky-black: rgb(171, 198, 228);  background*/  
   --white-1: rgb(225,241,253);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsla(53, 69%, 72%, 0.884); /*icon text and activate*/
+  --orange-yellow-crayola: hsla(53, 100%, 39%, 0.884); /*icon text and activate*/
   --vegas-gold: rgb(171, 198, 228);
   --light-gray: hsl(0, 0%, 100%);
   --light-gray-70: hsla(0, 0%, 84%, 0.868);
